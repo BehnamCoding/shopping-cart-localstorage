@@ -1,0 +1,177 @@
+@import '~bootstrap/scss/bootstrap';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
+ul {
+    display: flex;
+    flex-direction: row;
+    li {
+        list-style-type: none;
+        a {
+            color: #fff;
+            &:hover {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+header {
+    height: 120px;
+    .navbar {
+        z-index: 999;
+        ul {
+            li {
+                a {
+                    font-size: 20px;
+                }
+                &.dropdown {
+                    position: relative;
+                    a {
+                        position: relative;
+                        .badge {
+                            position: absolute;
+                            top: -7px;
+                            right: 10px;
+                            font-size: 11.5px;
+                        }
+                    }
+                    .drop-main {
+                        position: absolute;
+                        right: 0;
+                        top: 170%;
+                        left: unset;
+                        display: block;
+                        overflow-y: auto;
+                        max-height: 450px;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: 0.2s;
+                        .dropdown-menu {
+                            position: relative;
+                            width: 450px;
+                            #clear-all {
+                                font-size: 13px;
+                                padding: 4px 15px;
+                                &:focus {
+                                    box-shadow: none;
+                                }
+                            }
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                right: 25px;
+                                top: -9px;
+                                width: 0;
+                                height: 0;
+                                border-right: 10px solid transparent;
+                                border-left: 10px solid transparent;
+                                border-bottom: 10px solid #fff;
+                            }
+                            .table {
+                                thead {
+                                    tr {
+                                        th {
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+                                tbody {
+                                    tr {
+                                        td {
+                                            text-align: center;
+                                            vertical-align: middle;
+                                            &.remove {
+                                                a {
+                                                    font-size: 22px;
+                                                    color: red;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:hover .drop-main  {
+                        top: 150%;
+                        transition: 0.2s;
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.popup-message {
+    position: fixed;
+    top: 15%;
+    left: 20px;
+    width: 250px;
+    height: auto;
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    transform: translateY(-10px);
+    border-radius: 4px;
+    z-index: 99;
+    transition: 0.2s;
+    &.del {
+        background-color: #fc2048;
+    }
+    &.add {
+        background-color: #2099fc;
+    }
+    .content {
+        padding: 7px 12px;
+        hr {
+            background-color: #d3f8ff79;
+        }
+        p {
+            margin-bottom: 0;
+            color: #fff;
+        }
+    }
+    &.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+.product-container {
+    .row {
+        .pro-col {
+            margin-top: 25px;
+        }
+        .content {
+            .card {
+                transition: 0.3s;
+                img {
+                    width: 100%;
+                }
+                .card-body {
+                    padding: 0.1rem 1rem 0.7rem 1rem;
+                    .items {
+                        span {
+                            margin-top: 8px;
+                            &:nth-of-type(1) {
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                    #btn-cart {
+                        &:focus {
+                            box-shadow: none;
+                        }
+                    }
+                }
+                &:hover {
+                    box-shadow: 0px 10px 10px #e9e9e9d7;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar navbar-dark bg-dark text-white py-3 px-5 position-fixed w-100">
+            <h1>Shopping Cart</h1>
+            <ul class="mb-0">
+                <li class="dropdown"><a href="#!" data-toggle="dropdown"><i class="fas fa-shopping-cart mr-4"></i>
+                    <span id="pro-count" class="badge badge-danger badge-pill">0</span>
+                </a>
+                    <div class="drop-main">
+                        <div class="dropdown-menu show">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>image</th>
+                                        <th>name</th>
+                                        <th>price</th>
+                                        <th>Del</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-body">
+                                
+                                </tbody>
+                            </table>
+                            <button id="clear-all" class="btn btn-danger ml-3 rounded">Clear All</button>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#!"><i class="fas fa-user mr-4"></i></a></li>
+                <li><a href="#!"><i class="fas fa-home"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- POPUP MESSAGE -->
+    <div class="popup-message">
+        <div class="content">
+            <p class="text">Message</p>
+            <hr class="my-2">
+            <p class="desc"></p>
+        </div>
+    </div>
+
+    <!-- PRODUCTS -->
+    <div class="container product-container mt-5">
+        <h1 class="text-center font-weight-bold">Shop Products</h1>
+        <br>
+        <hr><br>
+
+        <div class="row">
+            <div class="col-md-3 pro-col">
+                <div class="content">
+                    <div class="card">
+                        <img src="./images/1.jpg" alt="product-image" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Winter Jacket 2020</h5>
+                            <div class="items my-3 d-flex flex-column">
+                                <span>Color : Brown</span>
+                                <span>Size : XXL</span>
+                                <span class="price">Price : 100$</span>
+                            </div>
+                            <button class="btn btn-danger send-btn rounded btn-block" data-id="1">Send to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pro-col">
+                <div class="content">
+                    <div class="card">
+                        <img src="./images/2.jpg" alt="product-image" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Asus Preadator</h5>
+                            <div class="items my-3 d-flex flex-column">
+                                <span>Color : Black & Red</span>
+                                <span>Size : XXL</span>
+                                <span class="price">Price : 2500$</span>
+                            </div>
+                            <button class="btn btn-danger send-btn rounded btn-block" data-id="2">Send to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pro-col">
+                <div class="content">
+                    <div class="card">
+                        <img src="./images/3.jpg" alt="product-image" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Sport T-shirt</h5>
+                            <div class="items my-3 d-flex flex-column">
+                                <span>Color : Lightgreen</span>
+                                <span>Size : XXL</span>
+                                <span class="price">Price : 80$</span>
+                            </div>
+                            <button class="btn btn-danger send-btn rounded btn-block" data-id="3">Send to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pro-col">
+                <div class="content">
+                    <div class="card">
+                        <img src="./images/4.jpg" alt="product-image" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Classic Hoodi</h5>
+                            <div class="items my-3 d-flex flex-column">
+                                <span>Color : Purple</span>
+                                <span>Size : XXXL</span>
+                                <span class="price">Price : 200$</span>
+                            </div>
+                            <button class="btn btn-danger send-btn rounded btn-block" data-id="4">Send to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pro-col">
+                <div class="content">
+                    <div class="card">
+                        <img src="./images/5.jpg" alt="product-image" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Adidas Sneaker</h5>
+                            <div class="items my-3 d-flex flex-column">
+                                <span>Color : Green & White</span>
+                                <span>Size : 43_44</span>
+                                <span class="price">Price : 300$</span>
+                            </div>
+                            <button class="btn btn-danger send-btn rounded btn-block" data-id="5">Send to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pro-col">
+                <div class="content">
+                    <div class="card">
+                        <img src="./images/6.jpg" alt="product-image" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Purple Natural Flower</h5>
+                            <div class="items my-3 d-flex flex-column">
+                                <span>Color : Purple</span>
+                                <span>Size : 45 * 25</span>
+                                <span class="price">Price : 100$</span>
+                            </div>
+                            <button class="btn btn-danger send-btn rounded btn-block" data-id="6">Send to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pro-col">
+                <div class="content">
+                    <div class="card">
+                        <img src="./images/7.jpg" alt="product-image" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Sony Headphone</h5>
+                            <div class="items my-3 d-flex flex-column">
+                                <span>Color : Black</span>
+                                <span>Size : XL</span>
+                                <span class="price">Price : 500$</span>
+                            </div>
+                            <button class="btn btn-danger send-btn rounded btn-block" data-id="7">Send to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pro-col">
+                <div class="content">
+                    <div class="card">
+                        <img src="./images/8.jpg" alt="product-image" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Apple Watch 2020</h5>
+                            <div class="items my-3 d-flex flex-column">
+                                <span>Color : Black</span>
+                                <span>Size : 30 * 15</span>
+                                <span class="price">Price : 750$</span>
+                            </div>
+                            <button class="btn btn-danger send-btn rounded btn-block" data-id="8">Send to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+</body>
+
+</html>
